@@ -10,6 +10,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- 引入bootstrap -->
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+	<link href="/css/materialdesignicons.min.css" rel="stylesheet">
+	<link href="/css/style.min.css" rel="stylesheet">
+
 	<!-- 引入JQuery  bootstrap.js-->
 	<script src="/js/jquery-3.2.1.min.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
@@ -18,12 +21,15 @@
 
 </head>
 <body>
+<div class="lyear-layout-web">
+	<div class="lyear-layout-container">
 	<!-- 顶栏 -->
 	<jsp:include page="top.jsp"></jsp:include>
+		<jsp:include page="menu.jsp"></jsp:include>
 	<!-- 中间主体 -->
-	<div class="container" id="content">
+		<main class="lyear-layout-content">
+		<div class="container-fluid" >
 		<div class="row">
-			<jsp:include page="menu.jsp"></jsp:include>
 			<div class="col-md-10">
 				<div class="panel panel-default">
 				    <div class="panel-heading">
@@ -42,9 +48,16 @@
 
 						</div>
 				    </div>
+					<div class="card-body">
+						<div class="table-responsive">
 				    <table class="table table-bordered">
 					        <thead>
 					            <tr>
+									<th>
+										<label class="lyear-checkbox checkbox-primary">
+											<input type="checkbox" id="check-all"><span></span>
+										</label>
+									</th>
 					                <th>学号</th>
 				  					<th>姓名</th>
 				  					<th>性别</th>
@@ -98,14 +111,22 @@
 				</div>
 
 			</div>
-		</div>
+				</div></div></div>
 	</div>
 	<div class="container" id="footer">
 		<div class="row">
 			<div class="col-md-12"></div>
 		</div>
 	</div>
+		</main>>
+	</div>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/perfect-scrollbar.min.js"></script>
+<script type="text/javascript" src="/js/main.min.js"></script>
+</div>
 </body>
+
 	<script type="text/javascript">
 		$("#nav li:nth-child(2)").addClass("active");
 
